@@ -8,7 +8,7 @@ DEP_FLAGS	=	-MMD
 RM			=	rm -f
 	
 
-SRC_FILES 	=	
+SRC_FILES 	=	Contact.class PhoneBook.class main
 OBJ			=	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 DEPS 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .d, $(SRC_FILES)))
 
@@ -19,7 +19,7 @@ $(OBJ_DIR)%.o: %.cpp
 				$(CC) -c $(CFLAGS) $(DEP_FLAGS) $< -o $@
 
 $(NAME): $(OBJ)
-				$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+				$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -I ./
 -include $(DEPS)
 
 clean:
