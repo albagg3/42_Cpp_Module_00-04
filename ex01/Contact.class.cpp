@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:40:12 by albagarc          #+#    #+#             */
-/*   Updated: 2023/08/24 18:48:36 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/08/25 12:51:15 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,17 @@ Contact::~Contact(){
 void	Contact::setName() {
 	std::cout << "Add a name: " ;
 	std::cin >> this->name;
+}
+
+void	Contact::setLastName() {
+	std::cout << "Add a last name: " ;
+	std::cin >> this->last_name;
+}
+
+
+void	Contact::setLastName() {
+	std::cout << "Add a last name: " ;
+	std::cin >> this->last_name;
 }
 
 void	Contact::getContact(void) const{

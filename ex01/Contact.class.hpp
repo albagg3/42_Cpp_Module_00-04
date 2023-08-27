@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:40:29 by albagarc          #+#    #+#             */
-/*   Updated: 2023/08/24 18:48:40 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/08/25 12:49:17 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,10 @@ public:
 	~Contact(void);
 
 	void	setName();
+	void	setLastName();
+	void	setNickName();
+	void	setPhoneNumber();
+	void	setDarkestSecret();
 	void	getContact(void) const;
 
 };

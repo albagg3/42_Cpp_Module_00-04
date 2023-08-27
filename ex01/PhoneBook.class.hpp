@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:41:02 by albagarc          #+#    #+#             */
-/*   Updated: 2023/08/24 19:07:32 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/08/25 12:49:40 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	PhoneBook();
 	~PhoneBook();
 	
-	void	add_data();
+	void	addData();
 	// void	getPhoneBook(void)	const; imprime toda la agenda
 	
 };
