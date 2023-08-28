@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albagarc <albagarc@student.42barcel>       +#+  +:+       +#+        */
+/*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:39:51 by albagarc          #+#    #+#             */
-/*   Updated: 2023/08/24 10:39:55 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/08/28 16:33:39 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,7 @@ int main(int argc, char **argv)
                 argv[i][j] = toupper(argv[i][j]);
                 j++;
             }
-            if (i != argc - 1)
-                std::cout << argv[i] << " ";
-            else
-                std::cout << argv[i];
+            std::cout << argv[i];
             i++;
         }
         std::cout << std::endl;
