@@ -2,7 +2,7 @@
 
 NAME		=	phonebook
 CC			=	c++
-CFLAGS		=	-Wall -Wextra -Werror 
+CFLAGS		=	-Wall -Wextra -Werror -g
 OBJ_DIR		=	obj/
 DEP_FLAGS	=	-MMD
 RM			=	rm -f

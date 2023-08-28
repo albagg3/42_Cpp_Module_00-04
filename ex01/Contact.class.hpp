@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:40:29 by albagarc          #+#    #+#             */
-/*   Updated: 2023/08/25 12:49:17 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/08/28 19:01:52 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,24 @@
 
 class Contact {
 private:
-	std::string	name;
-	std::string	last_name;
-	std::string	nickname;
-	std::string phone_number;
-	std::string darkest_secret;
+	std::string	_name;
+	std::string	_last_name;
+	std::string	_nickname;
+	std::string _phone_number;
+	std::string _darkest_secret;
+
+	std::string _getInput();
 	
 public:
 	
 	Contact(void);
-	// Contact(std::string n, std::string ln, std::string nck_n, std::string ph_n, std::string drk_scrt);
 	~Contact(void);
 
 	void	setName();
 	void	setLastName();
-	void	setNickName();
-	void	setPhoneNumber();
-	void	setDarkestSecret();
+	// void	setNickName();
+	// void	setPhoneNumber();
+	// void	setDarkestSecret();
 	void	getContact(void) const;
 
 };

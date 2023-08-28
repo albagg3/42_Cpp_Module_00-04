@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:47:36 by albagarc          #+#    #+#             */
-/*   Updated: 2023/08/25 12:49:36 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/08/28 18:31:23 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	main (void){
 	std::cout << "1.ADD" << std::endl;
 	std::cout << "2.SEARCH" << std::endl;
 	std::cout << "3.EXIT" << std::endl;
+	std::cout<< "Escribe una opcion: "; 
 	std::cin >> input_user;
 	if(input_user == "1" || input_user == "ADD")
 		agenda.addData();	
