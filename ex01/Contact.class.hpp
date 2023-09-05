@@ -23,7 +23,7 @@ private:
 	std::string _phone_number;
 	std::string _darkest_secret;
 
-	std::string _getInput();
+	std::string _getInput(std::string instruction);
 	
 public:
 	
@@ -32,10 +32,11 @@ public:
 
 	void	setName();
 	void	setLastName();
-	// void	setNickName();
-	// void	setPhoneNumber();
-	// void	setDarkestSecret();
+	void	setNickName();
+	void	setPhoneNumber();
+	void	setDarkestSecret();
 	void	getContact(void) const;
+	bool	hasInfo(Contact person) const;
 
 };
 

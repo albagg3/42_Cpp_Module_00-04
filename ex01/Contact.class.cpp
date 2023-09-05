@@ -13,6 +13,8 @@
 #include <iostream>
 #include "Contact.class.hpp"
 
+//**************************PUBLIC*****************************************//
+
 Contact::Contact(void) {
 		
 	std::cout << "Constructor Contacts void called" << std::endl;
@@ -25,36 +27,31 @@ Contact::~Contact(){
 	return ;
 }
 
-std::string _getInput()
-{
-	std::string	input;
-	while(input.length() == 0)
-	{
-		std::getline(std::cin,input);
-	}
-	return input;
-}
-
-// me podria hacer un std::cin y cogerme el valor name
 void	Contact::setName() {
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	while(this->_name.length() == 0 || this->_name=="")
-	{
-		std::cout << "Add a name: ";
-		std::getline(std::cin,this->_name);
-	
-	}
-	std::cout << this->_name <<std::endl;
+
+	this->_name = this->_getInput("Add a name: ");	
 }
-
-//getline
-
 
 void	Contact::setLastName() {
-	std::cout << "Add a last name: " ;
-	std::cin >> this->_last_name;
-	
+
+	this->_last_name = this->_getInput("Add a last_name: ");	
 }
+
+void	Contact::setNickName() {
+
+	this->_nickname = this->_getInput("Add a nickname: ");	
+}
+
+void	Contact::setPhoneNumber() {
+
+	this->_phone_number = this->_getInput("Add a phone number: ");	
+}
+
+void	Contact::setDarkestSecret() {
+
+	this->_darkest_secret = this->_getInput("Add a dark secret: ");	
+}
+
 
 void	Contact::getContact(void) const{
 	
@@ -65,3 +62,26 @@ void	Contact::getContact(void) const{
 	std::cout << "Darkest secret: " << this->_darkest_secret << std::endl;
 	return ;
 }
+
+bool	Contact::hasInfo(Contact person) const{
+	if(person._name.length() != 0)
+		return true;
+	else
+		return false;
+}
+
+
+//**************************PRIVATE*****************************************//
+
+std::string Contact::_getInput(std::string instruction)
+{
+	std::string	input;
+	while(input.length() == 0)
+	{
+		std::cout << instruction;
+		std::getline(std::cin,input);
+	}
+	return input;
+}
+
+//**************************************************************************//

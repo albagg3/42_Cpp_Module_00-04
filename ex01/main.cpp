@@ -22,16 +22,20 @@ int	main (void){
 	// Contact third("Micaela", "Martinez-Carlon", "Micaelixx","00000", "soy un bebé" );
 	std::string input_user;
 	PhoneBook agenda;
-	
-	std::cout << "WELCOME TO YOUR PHONE BOOK" << std::endl;
-	std::cout << "Please select an option: " << std::endl;
-	std::cout << "1.ADD" << std::endl;
-	std::cout << "2.SEARCH" << std::endl;
-	std::cout << "3.EXIT" << std::endl;
-	std::cout<< "Escribe una opcion: "; 
-	std::cin >> input_user;
-	if(input_user == "1" || input_user == "ADD")
-		agenda.addData();	
+	while(1)
+	{
+		std::cout << "WELCOME TO YOUR PHONE BOOK" << std::endl;
+		std::cout << "Please select an option: " << std::endl;
+		std::cout << "1.ADD" << std::endl;
+		std::cout << "2.SEARCH" << std::endl;
+		std::cout << "3.EXIT" << std::endl;
+		std::cout<< "Escribe una opcion: "; 
+		std::cin >> input_user;
+		if(input_user == "1" || input_user == "ADD")
+			agenda.addData();
+			
+
+	}
 	// first.getContact();
 	// PhoneBook agenda;
 	

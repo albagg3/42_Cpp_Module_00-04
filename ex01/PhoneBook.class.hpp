@@ -18,8 +18,9 @@
 class PhoneBook{
 private:
 //array de 8 contactos
-	Contact contacts[8];//deberia ser privada
-	// int	how_many_contacts(); 
+	Contact _contacts[8];//deberia ser privada
+	int		_howManyContacts(Contact contacts[]) const; //nos devuelve el numero de contactos que tienen info en el array
+	void	_delOldContact(Contact contacts[]);
 public:
 	PhoneBook();
 	~PhoneBook();
