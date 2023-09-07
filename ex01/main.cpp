@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:47:36 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/07 16:53:37 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/07 18:09:44 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,13 @@ int	main (void){
 	PhoneBook agenda;
 	while(std::cin)
 	{
-		std::cout << "WELCOME TO YOUR PHONE BOOK" << std::endl;
+		std::cout << "* WELCOME TO YOUR PHONE BOOK *" << std::endl;
 		std::cout << "Please select an option: " << std::endl;
 		std::cout << "1.ADD" << std::endl;
 		std::cout << "2.SEARCH" << std::endl;
 		std::cout << "3.EXIT" << std::endl;
 		std::cout << "Escribe una opcion: "; 
 		std::cin >> input_user;
-		
 		if(!std::cin)
 			break ;
 		if(input_user == "1" || input_user == "ADD")
@@ -55,8 +54,10 @@ int	main (void){
 			if(std::stod(contact_number) >=1  && std::stod(contact_number) <= 8 && isNumber(contact_number))
 				agenda.printContact(contact_number);
 			else
+			{
+				std::cout << std::endl;
 				std::cout << "<<<<<<<<<  THAT'S NOT A VALID NUMBER  >>>>>>>>>>>>" << std::endl << std::endl;
-			
+			}
 		}
 		else if(input_user == "3" || input_user == "EXIT")
 		{
@@ -66,11 +67,12 @@ int	main (void){
 				break;
 			else
 				std::cout << std::endl;
-				
 		}
 		else
+		{
+			std::cout << std::endl;
 			std::cout << "<<<<<<<<<  WRONG OPTION  >>>>>>>>>>>>" << std::endl << std::endl;
+		}
 	}
-	
 	return(0);
 }

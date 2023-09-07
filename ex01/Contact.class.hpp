@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:40:29 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/07 15:48:34 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/07 18:09:27 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ public:
 	const std::string&	getPhoneNumber() const;
 	const std::string&	getDarkestSecret() const;
 	void				getContact(void) const;
+	
 	bool				hasInfo(Contact person) const;
 
 };

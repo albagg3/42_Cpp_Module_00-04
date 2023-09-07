@@ -6,13 +6,22 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:40:12 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/07 16:34:32 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/07 18:09:13 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Contact.class.hpp"
 #include <iomanip>
+
+bool isSpace(const std::string& str) {
+    for (size_t i = 0 ; i < str.length(); i++) {
+        if (!std::isspace(str[i])) {
+            return false; 
+        }
+    }
+    return true; 
+}
 
 //**************************PUBLIC*****************************************//
 
@@ -78,11 +87,13 @@ const std::string&	Contact::getDarkestSecret()	const{
 }
 void	Contact::getContact(void) const{
 	
+	std::cout << std::endl;
 	std::cout << std::left << std::setw(16) << "Name: " << this->_name << std::endl;
 	std::cout << std::left << std::setw(16) << "Last name: " << this->_last_name << std::endl;
 	std::cout << std::left << std::setw(16) << "Nickname: " << this->_nickname << std::endl;
 	std::cout << std::left << std::setw(16) << "Phone number: " << this->_phone_number << std::endl;
 	std::cout << std::left << std::setw(16) << "Darkest secret: " << this->_darkest_secret << std::endl;
+	std::cout << std::endl;
 	return ;
 }
 
@@ -99,7 +110,7 @@ bool	Contact::hasInfo(Contact person) const{
 std::string Contact::_getInput(std::string instruction)
 {
 	std::string	input;
-	while(input.length() == 0 && std::cin)
+	while(std::cin && (input.length() == 0 || isSpace(input)) )
 	{
 		std::cout << instruction;
 		std::getline(std::cin,input);

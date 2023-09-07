@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:40:50 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/07 16:25:11 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/07 18:10:11 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,10 +81,7 @@ void	PhoneBook::printDataTable() const{
 			std::cout << "|";
 			std::cout << std::right << std::setw(10) << this->_resizeBigInput(_contacts[i - 1].getNickName());
 			std::cout << "|" << std::endl;
-		}
-			
-			
-			
+		}	
 	}
 }
 
@@ -99,7 +96,8 @@ int PhoneBook::_howManyContacts() const{
 	int counter;
 	
 	counter = 0;
-	for(int i = 0; i < 8; i++){
+	for(int i = 0; i < 8; i++)
+	{
 		if(this->_contacts[i].hasInfo(this->_contacts[i]))
 			counter++;
 	}
