@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:40:50 by albagarc          #+#    #+#             */
-/*   Updated: 2023/08/28 18:20:49 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/07 14:44:25 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ void PhoneBook::addData(){
 	int n_contacts;
 	int arr_pos;
 	
-	n_contacts = this->_howManyContacts(this->_contacts);
+	n_contacts = this->_howManyContacts();
 	if(n_contacts < 8)
-		arr_pos = n_contacts + 1;
+		arr_pos = n_contacts ;
 	else
 	{
-		this->_delOldContact(this->_contacts);
+		this->_delOldContact();
 		arr_pos = 7;
 	}
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -48,22 +48,29 @@ void PhoneBook::addData(){
 	return ;
 }
 
-
+void	PhoneBook::getAgendaNames() const{
+	for(int i = 0; i < 8; i++)
+	{
+		this->_contacts[i].getContact();
+	}
+}
 //*********************PRIVATE**************************//
 
-int PhoneBook::_howManyContacts(Contact contacts[]) const{
+int PhoneBook::_howManyContacts() const{
 	int counter;
+	
+	counter = 0;
 	for(int i = 0; i < 8; i++){
-		if(contacts[i].hasInfo(contacts[i]))
+		if(this->_contacts[i].hasInfo(this->_contacts[i]))
 			counter++;
 	}
 	return(counter);
 }
 
-void	PhoneBook::_delOldContact(Contact contacts[]){
+void	PhoneBook::_delOldContact(){
 
 	for(int index = 1 ; index < 8 ; index++)
 	{
-		contacts[index - 1] = contacts[index]; 
+		this->_contacts[index - 1] = this->_contacts[index]; 
 	}
 }
