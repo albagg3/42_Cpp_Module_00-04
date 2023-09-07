@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:40:50 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/07 18:10:11 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/07 18:21:46 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ void	PhoneBook::printContact(std::string number) const {
 	
 	this->_contacts[election - 1].getContact();
 }
+
 //*********************PRIVATE**************************//
 
 int PhoneBook::_howManyContacts() const{
