@@ -8,7 +8,7 @@ DEP_FLAGS	=	-MMD
 RM			=	rm -f
 	
 
-SRC_FILES 	=	Account main
+SRC_FILES 	=	Account tests
 OBJ			=	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 DEPS 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .d, $(SRC_FILES)))
 
