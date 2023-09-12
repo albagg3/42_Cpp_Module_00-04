@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 18:19:42 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/11 20:58:43 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/12 12:27:11 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 //**************************PUBLIC*****************************************//
 
 //--------------------Constructor----Destructor----------------------------//
+
 Account::Account(int initial_deposit) : _amount(initial_deposit){
 	
 	// this->checkAmount();
