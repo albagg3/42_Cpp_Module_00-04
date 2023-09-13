@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 17:19:31 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/13 12:42:50 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/13 18:31:50 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ Zombie::~Zombie(void){
 	return ;
 }
 
+//---------------------------------------------------------------------------//
 void	Zombie::announce(void){
 	
 	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
