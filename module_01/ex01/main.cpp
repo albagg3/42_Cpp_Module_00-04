@@ -5,20 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 12:49:19 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/12 16:21:23 by albagarc         ###   ########.fr       */
+/*   Created: 2023/09/13 12:07:06 by albagarc          #+#    #+#             */
+/*   Updated: 2023/09/13 12:40:58 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main (void)
+int	main(void)
 {
-	Zombie	*zombie_one;
+	Zombie *group_of_zombies;
 	
-	zombie_one = newZombie("Matias");
-	zombie_one->announce();
-	randomChump("Piedad");
-	delete (zombie_one);
-	return (0);
+	group_of_zombies = zombieHorde( 3, "Mati");
+	delete [] group_of_zombies;
 }
