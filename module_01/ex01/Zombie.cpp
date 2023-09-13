@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 17:19:31 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/13 12:39:59 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/13 12:42:50 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void	Zombie::announce(void){
 void	Zombie::setName(std::string name) {
 	
 	this->_name = name;
-	std::cout << "my name is " << this->_name << std::endl;
 	return ;
 }
 

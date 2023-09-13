@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:08:03 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/13 12:39:19 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/13 12:43:22 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ Zombie* zombieHorde( int N, std::string name )
 	Zombie	*zombies = new Zombie[N];
 	
 	for(int i = 0; i < N; i++)
+	{
 		zombies[i].setName(name);
+		zombies[i].announce();
+	}
 	
 	return(zombies);
 }
