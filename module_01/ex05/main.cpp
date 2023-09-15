@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:10:08 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/15 17:36:16 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/15 18:14:28 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	main(void){
 	std::cout << std::endl;
 	robot.complain("ERROR");
 	std::cout << std::endl;
-	robot.complain("eee");
+
 }
 
