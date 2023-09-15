@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 17:52:50 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/15 16:55:55 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/15 17:00:33 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 			exit(EXIT_FAILURE);
 		}
 		std::ofstream file_out_write;
-		file_out_write.open(argv[1] + ".replace", std::ios::out);
+		file_out_write.open(filename + ".replace", std::ios::out);
 		if(!file_out_write.is_open())
 		{
 			std::cout << "Error openning the file" << std::endl;
