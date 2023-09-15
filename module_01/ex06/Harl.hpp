@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/15 17:10:08 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/15 18:47:26 by albagarc         ###   ########.fr       */
+/*   Created: 2023/09/15 17:09:44 by albagarc          #+#    #+#             */
+/*   Updated: 2023/09/15 18:05:05 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef HARL_H
+# define HARL_H
+#include <iostream>
 
-int	main(void){
+class	Harl {
+	private:
 
-	Harl	robot;
-	
-	robot.complain("DEBUG");
-	std::cout << std::endl;
-	robot.complain("INFO");
-	std::cout << std::endl;
-	robot.complain("WARNING");
-	std::cout << std::endl;
-	robot.complain("ERROR");
-	std::cout << std::endl;
-}
+		void	_debug(void);
+		void	_info(void);
+		void	_warning(void);
+		void	_error(void);
+
+	public:
+
+		Harl();
+		~Harl();
+
+		void	complain(std::string level);
+};
+
+#endif
