@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:46:57 by codespace         #+#    #+#             */
-/*   Updated: 2023/09/18 15:07:20 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/19 18:07:34 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed {
 
     public:
     //Des/Constructores
-        Fixed(); // se podria pasar una referencia a la variable privada???
+        Fixed(); 
         Fixed(const Fixed& other); //constructor de copia
         ~Fixed();
     //Operador de asignacion de copia

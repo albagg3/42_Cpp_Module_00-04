@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:46:57 by codespace         #+#    #+#             */
-/*   Updated: 2023/09/19 17:32:08 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/19 18:05:43 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,18 @@ class Fixed {
     
     private:
         int                 _fixed_point;
-        static const int    _fractional_bits = 8;
+        static const int    _fractional_bits;
 
 
     public:
-    //Des/Constructores
+    //Constructores
         Fixed(); // se podria pasar una referencia a la variable privada???
         Fixed(const int number); 
 		Fixed(const float number);
         Fixed(const Fixed& other); //constructor de copia
         ~Fixed();
 
-    //Operador de asignacion de copia
+    //OperaDORES
         Fixed&	operator=(const Fixed& rhs);
 		Fixed	operator+(const Fixed& rhs) const;
 		Fixed	operator-(const Fixed& rhs) const;
@@ -42,7 +42,6 @@ class Fixed {
 		Fixed&	operator--(void);
 		Fixed	operator--(int);
 		bool	operator>(const Fixed& rhs)const;
-	
 		bool	operator<(const Fixed& rhs) const ;
 		bool	operator>=(const Fixed& rhs)const ;
 		bool	operator<=(const Fixed& rhs) const;

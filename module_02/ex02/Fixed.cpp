@@ -6,14 +6,14 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:46:46 by codespace         #+#    #+#             */
-/*   Updated: 2023/09/19 17:36:33 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:57:26 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 // #include <iostream>
 //**************************PUBLIC*****************************************//
-
+const int    Fixed::_fractional_bits = 8;
 //--------------------Constructor----Destructor----------------------------//
 
 //Default constructor
@@ -53,7 +53,7 @@ Fixed::~Fixed(){
 Fixed& Fixed::operator=(const Fixed& rhs){
     if(this == &rhs)
         return *this;
-	std::cout << "Copy Assignament operator called" << std::endl;
+	// std::cout << "Copy Assignament operator called" << std::endl;
     this->_fixed_point = rhs._fixed_point;
     return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:46:46 by codespace         #+#    #+#             */
-/*   Updated: 2023/09/19 10:58:45 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/19 18:08:17 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 #include <iostream>
 //**************************PUBLIC*****************************************//
 
-//--------------------Constructor----Destructor----------------------------//
+//--------------------CONSTRUCTOR------------------------------------------//
 Fixed::Fixed() : _fixed_point(0){
 	std::cout << "Default constructor called" << std::endl;
 	return ;
 }
 
-Fixed::Fixed(const Fixed& other) : _fixed_point(other._fixed_point){ //esta bien???
+Fixed::Fixed(const Fixed& other) : _fixed_point(other._fixed_point){ 
 	std::cout << "Copy constructor called" << std::endl;
 	return ;
 }
@@ -48,6 +48,6 @@ int		Fixed::getRawBits(void){
 
 void	Fixed::setRawBits(int const raw){
 	
-	this->_fixed_point = raw; // hay que transformarlos o no???
+	this->_fixed_point = raw; 
 }
 //**************************PRIVATE*****************************************//
