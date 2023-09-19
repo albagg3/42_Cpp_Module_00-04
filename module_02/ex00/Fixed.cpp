@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:46:46 by codespace         #+#    #+#             */
-/*   Updated: 2023/09/18 15:06:37 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/19 10:58:45 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,6 @@ int		Fixed::getRawBits(void){
 
 void	Fixed::setRawBits(int const raw){
 	
-	this->_fixed_point = raw << this->_fractional_bits;
+	this->_fixed_point = raw; // hay que transformarlos o no???
 }
 //**************************PRIVATE*****************************************//

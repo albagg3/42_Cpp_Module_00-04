@@ -6,13 +6,14 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:46:57 by codespace         #+#    #+#             */
-/*   Updated: 2023/09/18 18:31:55 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/19 11:29:45 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_H
 # define FIXED_H
 
+#include <iostream>
 class Fixed {
     
     private:
@@ -36,6 +37,8 @@ class Fixed {
 		int		toInt( void ) const;
 	
 };
+
+std::ostream& operator<< (std::ostream &out, const Fixed &object);
 
 #endif
 
