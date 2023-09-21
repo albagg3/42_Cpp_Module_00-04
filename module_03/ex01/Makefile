@@ -1,22 +1,24 @@
 #-------------VARIABLES---------------------
 
-NAME		=	Aaaaaand...Open!
+NAME		=	Serena_my_love!
 CC			=	c++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 OBJ_DIR		=	obj/
+SRC_DIR		= 	src/
+INC_DIR		=	inc
 DEP_FLAGS	=	-MMD
 RM			=	rm -f
 	
 
-SRC_FILES 	=	main ClapTrap
+SRC_FILES 	=	main ClapTrap ScavTrap
 OBJ			=	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 DEPS 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .d, $(SRC_FILES)))
 
 #--------------RULES------------------------
 
-$(OBJ_DIR)%.o: %.cpp
+$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 				mkdir -p $(OBJ_DIR)
-				$(CC) -c $(CFLAGS) $(DEP_FLAGS) $< -o $@
+				$(CC) -c $(CFLAGS) -I $(INC_DIR) $(DEP_FLAGS) $< -o $@
 
 $(NAME): $(OBJ) Makefile
 				$(CC) $(CFLAGS) $(OBJ) -o $(NAME)

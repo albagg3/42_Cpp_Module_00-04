@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:05:55 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/21 16:22:14 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/21 17:59:18 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 #define RESET "\e[0m"
 
 class	ClapTrap {
-	private:
+	protected:
 		std::string		_name;
 		int				_hit_points;
 		int				_energy_points;
@@ -36,10 +36,10 @@ class	ClapTrap {
 		ClapTrap();
 		ClapTrap(const std::string& name);
 		ClapTrap(const ClapTrap& original);
-		~ClapTrap();
+		virtual ~ClapTrap();
 		ClapTrap&	operator=(const ClapTrap& rhs);
 
-		void				attack(const std::string& target);
+		virtual void		attack(const std::string& target);
 		void				takeDamage(unsigned int amount);
 		void				beRepaired(unsigned int amount);
 		//setters

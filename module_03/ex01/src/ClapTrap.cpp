@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:05:41 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/21 16:54:11 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/21 18:00:46 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,38 +14,42 @@
 //*****************************PUBLIC*****************************************//
 
 //Default Constructor
-ClapTrap::ClapTrap(){
+ClapTrap::ClapTrap()
+{
 	setName("Default");
 	setHitPoints(10);
 	setEnergyPoints(10);
 	setAttackDamage(0);	
-	std::cout << GREY << this->_name << " was created" << RESET << std::endl;
+	std::cout << GREY << this->_name << " ClapTrap was created." << RESET << std::endl;
 	return ;
 }
 
 //Constructor de copia
-ClapTrap::ClapTrap(const ClapTrap& original): 	_name(original._name), 
-												_hit_points(original._hit_points),
-												_energy_points(original._energy_points),
-												_attack_damage(original._attack_damage)
+ClapTrap::ClapTrap(const ClapTrap& original): 	
+	_name(original._name), 
+	_hit_points(original._hit_points),
+	_energy_points(original._energy_points),
+	_attack_damage(original._attack_damage)
 {
-	std::cout << GREY << this->_name << " was created whith a copy constructor" << RESET << std::endl;
+	std::cout << GREY << this->_name << " ClapTrap was created whith a copy constructor." << RESET << std::endl;
 	return ;
 }
 
 
 //Constructor with name
-ClapTrap::ClapTrap(const std::string& name){
-	setName(name);
-	setHitPoints(10);
-	setEnergyPoints(10);
-	setAttackDamage(0);	
+ClapTrap::ClapTrap(const std::string& name)
+{
+	this->setName(name);
+	this->setHitPoints(10);
+	this->setEnergyPoints(10);
+	this->setAttackDamage(0);	
 	std::cout << GREY << this->_name << " was created." << RESET << std::endl;
 	return ;
 }
 
 //Assignation operator
-ClapTrap& ClapTrap::operator=(const ClapTrap& rhs){
+ClapTrap&	ClapTrap::operator=(const ClapTrap& rhs)
+{
 	if(this == &rhs)
 		return *this;
 	this->_name = rhs._name;
@@ -55,9 +59,10 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& rhs){
 	return *this;
 }
 
-ClapTrap::~ClapTrap(){
+ClapTrap::~ClapTrap()
+{
 
-	std::cout << GREY << this->_name << " was destructed" << RESET << std::endl;
+	std::cout << GREY << this->_name << " was destructed." << RESET << std::endl;
 	return ;
 }
 
@@ -88,12 +93,12 @@ const std::string&	ClapTrap::getName(void) const{
 void	ClapTrap::attack(const std::string& target){
 	if(this->_hit_points == 0 || this->_energy_points == 0)
 		{
-			std::cout << RED << "No energy_points or hit_points available to attack"<< RESET <<std::endl;
+			std::cout << RED << " ClapTrap: No energy_points or hit_points available to attack"<< RESET <<std::endl;
 			return ;
 		}
 	this->_energy_points--;
-	std::cout << YELLOW << this->_name << " attacks " << target << ", causing " << this->_attack_damage <<" damage."<<  RESET << std::endl;
-	std::cout << "My name is " << this->_name << " I have " << this->_energy_points << " energy points and " << this->_hit_points << " hit_points left."  << std::endl;
+	std::cout << YELLOW << this->_name << " ClapTrap attacks " << target << ", causing " << this->_attack_damage <<" damage."<<  RESET << std::endl;
+	std::cout << "My name is ClapTrap " << this->_name << " I have " << this->_energy_points << " energy points and " << this->_hit_points << " hit_points left."  << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount){
