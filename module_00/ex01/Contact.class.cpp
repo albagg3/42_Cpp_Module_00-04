@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:40:12 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/07 18:09:13 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/20 13:27:24 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ bool isSpace(const std::string& str) {
 
 //--------------------Constructor----Destructor----------------------------//
 Contact::Contact(void) {
-		
 	return ;
 }
 

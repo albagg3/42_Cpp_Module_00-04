@@ -6,12 +6,12 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:46:46 by codespace         #+#    #+#             */
-/*   Updated: 2023/09/19 17:57:26 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:06:17 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-// #include <iostream>
+
 //**************************PUBLIC*****************************************//
 const int    Fixed::_fractional_bits = 8;
 //--------------------Constructor----Destructor----------------------------//

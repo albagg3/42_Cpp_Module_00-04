@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:47:36 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/07 18:09:44 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/20 13:29:02 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <iomanip>
 #include "Contact.class.hpp"
 #include "PhoneBook.class.hpp"
+#include <tuple>
+
 
 
 bool isNumber(const std::string& str) {
@@ -27,6 +29,7 @@ bool isNumber(const std::string& str) {
 
 int	main (void){
 
+	std::tuple<int,char> foo (10,'x');
 	std::string input_user;
 	std::string contact_number;
 	std::string response;

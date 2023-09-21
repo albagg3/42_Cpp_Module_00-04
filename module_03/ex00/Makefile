@@ -1,14 +1,14 @@
 #-------------VARIABLES---------------------
 
-NAME		=	phonebook
+NAME		=	clapTrap
 CC			=	c++
-CFLAGS		=	-Wall -Wextra -Werror -g
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 OBJ_DIR		=	obj/
 DEP_FLAGS	=	-MMD
 RM			=	rm -f
 	
 
-SRC_FILES 	=	Contact.class PhoneBook.class main
+SRC_FILES 	=	main ClapTrap
 OBJ			=	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 DEPS 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .d, $(SRC_FILES)))
 
@@ -19,7 +19,7 @@ $(OBJ_DIR)%.o: %.cpp
 				$(CC) -c $(CFLAGS) $(DEP_FLAGS) $< -o $@
 
 $(NAME): $(OBJ) Makefile
-				$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -I ./
+				$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 -include $(DEPS)
 
 all: 
