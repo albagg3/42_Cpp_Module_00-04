@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:05:56 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/21 17:52:16 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/21 18:50:56 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class ScavTrap : public ClapTrap
 		~ScavTrap();
 
 		void		attack(const std::string& target);
+		void		guardGate();
 };
 
 

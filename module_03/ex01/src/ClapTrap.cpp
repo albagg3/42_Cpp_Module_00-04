@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:05:41 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/21 18:00:46 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/21 18:45:57 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ ClapTrap::ClapTrap(const std::string& name)
 	this->setHitPoints(10);
 	this->setEnergyPoints(10);
 	this->setAttackDamage(0);	
-	std::cout << GREY << this->_name << " was created." << RESET << std::endl;
+	std::cout << GREY << this->_name << " ClapTrap was created." << RESET << std::endl;
 	return ;
 }
 
@@ -62,7 +62,7 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& rhs)
 ClapTrap::~ClapTrap()
 {
 
-	std::cout << GREY << this->_name << " was destructed." << RESET << std::endl;
+	std::cout << GREY << this->_name << " ClapTrap was destructed." << RESET << std::endl;
 	return ;
 }
 

@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:05:41 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/21 18:00:31 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/09/21 18:55:11 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,8 @@ void	ScavTrap::attack(const std::string& target)
 	this->_energy_points--;
 	std::cout << YELLOW << this->_name << " ScavTrap attacks " << target << ", causing " << this->_attack_damage <<" damage."<<  RESET << std::endl;
 	std::cout << "My name is ScavTrap " << this->_name << " I have " << this->_energy_points << " energy points and " << this->_hit_points << " hit_points left."  << std::endl;
+}
+
+void ScavTrap::guardGate(){
+	std::cout << this->_name << " ScavTrap is on gate keeper mode" << std::endl;
 }
