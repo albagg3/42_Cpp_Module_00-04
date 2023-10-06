@@ -21,7 +21,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 {
 
 	private:
-		/* data */
+		std::string		_name_diamond;
 	public:
 	
 		DiamondTrap();

@@ -19,9 +19,9 @@
 
 DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap()
 {
-	this->setHitPoints(100);
-	this->setEnergyPoints(100);
-	this->setAttackDamage(30);	
+	this->_hit_points = FragTrap::_hit_points;
+	this->_energy_points = ScavTrap::_energy_points;
+	this->_attack_damage = FragTrap::_attack_damage;	
 	std::cout << GREY << this->_name << " DiamondTrap was created." << RESET << std::endl;
 	return ;
 }
