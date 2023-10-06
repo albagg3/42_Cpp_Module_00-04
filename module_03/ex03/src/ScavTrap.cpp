@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:05:41 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/22 10:24:16 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/06 17:33:34 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
-	this->setName("Default");
 	this->setHitPoints(100);
 	this->setEnergyPoints(50);
 	this->setAttackDamage(20);	
@@ -43,10 +42,23 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 	return ;
 }
 
+//Destructor
 ScavTrap::~ScavTrap(){
 		std::cout << GREY << this->_name << " ScavTrap was destructed." << RESET << std::endl;
 
 	return ;
+}
+
+//Assignation operator
+ScavTrap&	ScavTrap::operator=(const ScavTrap& rhs)
+{
+	if(this == &rhs)
+		return *this;
+	this->_name = rhs._name;
+	this->_hit_points = rhs._hit_points;
+	this->_energy_points = rhs._energy_points;
+	this->_attack_damage = rhs._attack_damage;
+	return *this;
 }
 
 void	ScavTrap::attack(const std::string& target)

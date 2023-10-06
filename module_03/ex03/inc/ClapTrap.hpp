@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:05:55 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/22 10:55:17 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/06 17:16:15 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,12 @@ class	ClapTrap {
 		int				_attack_damage;
 	
 	public:
+	
 		ClapTrap();
 		ClapTrap(const std::string& name);
 		ClapTrap(const ClapTrap& original);
 		virtual ~ClapTrap();
+
 		ClapTrap&	operator=(const ClapTrap& rhs);
 
 		virtual	void		attack(const std::string& target);

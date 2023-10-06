@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:05:56 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/22 12:01:56 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/06 16:39:03 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ class FragTrap : public ClapTrap
 		FragTrap(const FragTrap& original);
 		~FragTrap();
 
-	
+		FragTrap& operator=(const FragTrap& rhs);
+		
 		void		highFivesGuys();
 };
 

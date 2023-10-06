@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:06:37 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/22 10:50:23 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/06 17:09:59 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ int main ()
 
 	ScavTrap	robot1("Wallie");
 	ScavTrap	robot2("R2d2");
+	ScavTrap	robot3(robot2);
+
+	std::cout << robot3.getName() << std::endl;
 	// ClapTrap	*robot3 = new ScavTrap("Arturito");
 
 	// robot3->attack(robot2.getName());

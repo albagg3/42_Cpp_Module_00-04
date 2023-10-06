@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:05:41 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/22 12:07:54 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/06 17:09:24 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 	return ;
 }
 //Copy Constructor
-ScavTrap::ScavTrap(const ScavTrap& original): 	
-	ClapTrap(original)
+ScavTrap::ScavTrap(const ScavTrap& original): 	ClapTrap(original)
 {
 	std::cout << GREY << this->_name << " ScavTrap was created whith a copy constructor." << RESET << std::endl;
 	return ;
@@ -43,11 +42,25 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 	return ;
 }
 
+//Destructor
 ScavTrap::~ScavTrap(){
 		std::cout << GREY << this->_name << " ScavTrap was destructed." << RESET << std::endl;
 
 	return ;
 }
+
+//Assignation operator
+ScavTrap&	ScavTrap::operator=(const ScavTrap& rhs)
+{
+	if(this == &rhs)
+		return *this;
+	this->_name = rhs._name;
+	this->_hit_points = rhs._hit_points;
+	this->_energy_points = rhs._energy_points;
+	this->_attack_damage = rhs._attack_damage;
+	return *this;
+}
+
 
 void	ScavTrap::attack(const std::string& target)
 {
