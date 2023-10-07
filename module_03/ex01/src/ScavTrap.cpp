@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:05:41 by albagarc          #+#    #+#             */
-/*   Updated: 2023/10/06 17:09:24 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/07 11:58:49 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
-	this->setName("Default");
+	
 	this->setHitPoints(100);
 	this->setEnergyPoints(50);
 	this->setAttackDamage(20);	

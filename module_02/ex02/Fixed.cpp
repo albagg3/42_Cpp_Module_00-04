@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:46:46 by codespace         #+#    #+#             */
-/*   Updated: 2023/09/20 17:06:17 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/07 15:58:50 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -235,5 +235,5 @@ std::ostream& operator<< (std::ostream &out, const Fixed &object)
     out << object.toFloat();
     return out;
 }
-//**************************PRIVATE*****************************************//
+
 

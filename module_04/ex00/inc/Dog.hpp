@@ -3,11 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albagarc <albagarc@student.42barcel>       +#+  +:+       +#+        */
+/*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 18:25:48 by albagarc          #+#    #+#             */
-/*   Updated: 2023/10/06 18:25:50 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/07 16:18:54 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DOG_H
+# define DOG_H
 
+#include "Animal.hpp"
+
+class Dog : public Animal
+{
+	private:
+
+	public:
+		Dog();									//Constructor
+		Dog(const Dog& original);				//Copy constructor
+		~Dog();									//Destructor
+
+		Dog&	operator=(const Dog& rhs); 		//Assignation operator
+		
+		void	makeSound() const;
+	
+};
+
+#endif

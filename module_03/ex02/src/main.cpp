@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:06:37 by albagarc          #+#    #+#             */
-/*   Updated: 2023/09/22 11:43:34 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/07 12:05:08 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int main ()
 	robot1.takeDamage(150);
 	std::cout << BOLDBLUE << "[Wallie no puede atacar porque esta muerto.]" << RESET<< std::endl;
 	robot1.attack(robot2.getName());
+
+
 	
 
 	// delete robot3;
