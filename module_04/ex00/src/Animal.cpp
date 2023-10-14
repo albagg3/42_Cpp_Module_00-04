@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 18:26:36 by albagarc          #+#    #+#             */
-/*   Updated: 2023/10/07 16:17:54 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/14 16:39:03 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ Animal::~Animal()
 }
 
 //Assignation operator
-
 Animal&	Animal::operator=(const Animal& rhs)
 {
 	std::cout << GREY << "Animal asignation operator was called" << RESET << std::endl;
@@ -47,6 +46,7 @@ void	Animal::makeSound() const
 	return ;
 }
 
+//Getters
 std::string	Animal::getType() const
 {
 	return this->type;

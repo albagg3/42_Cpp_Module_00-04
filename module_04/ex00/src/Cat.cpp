@@ -6,12 +6,11 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 18:27:07 by albagarc          #+#    #+#             */
-/*   Updated: 2023/10/07 16:18:34 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/14 16:43:37 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
-
 
 //Constructor
 Cat::Cat() 
