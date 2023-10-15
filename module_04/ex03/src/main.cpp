@@ -10,15 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "ClapTrap.hpp"
-// #include "../inc/ScavTrap.hpp"
-// #include "../inc/FragTrap.hpp"
-#include "../inc/DiamondTrap.hpp"
-
 int main ()
 {
-
-	DiamondTrap	robot1("Wallie");
-	robot1.whoAmI();
 
 }
