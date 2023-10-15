@@ -27,7 +27,6 @@ Dog::Dog(const Dog& original) : Animal(original)
 {
 	this->_brain_dog = new Brain(*original._brain_dog);
 	std::cout << GREY << "Dog copy constructor was called" << RESET << std::endl;
-	
 }
 
 //Destructor
@@ -41,7 +40,7 @@ Dog::~Dog()
 //En el de asignacion no hace falta que hagamos el = al type porque ya estara creado antes 
 Dog&	Dog::operator=(const Dog& rhs)
 {
-	std::cout << GREY << "Animal asignation operator was called" << RESET << std::endl;
+	std::cout << GREY << "Dog asignation operator was called" << RESET << std::endl;
 	if(this == &rhs)
 		return *this;
 	return *this;
@@ -57,7 +56,7 @@ void	Dog::addIdeaToBrain(std::string idea)
 	this->_brain_dog->setIdea(idea);
 }
 
-void	Dog::getIdeaOfBrain()
+void	Dog::getIdeaOfBrain() const
 {
 	this->_brain_dog->getIdeas();
 }

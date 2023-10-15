@@ -19,16 +19,17 @@
 int main ()
 {
 
-	Dog* snoopy = new Dog();
+	// Dog* snoopy = new Dog();
 	
-	snoopy->addIdeaToBrain("hola");
-	snoopy->getIdeaOfBrain();
-	Dog superCan(*snoopy);
-	snoopy->addIdeaToBrain("que pasa");
-	superCan.getIdeaOfBrain();
-	std::cout << std::endl;
-	snoopy->getIdeaOfBrain();
-	delete snoopy;
+	// snoopy->addIdeaToBrain("hola");
+	// snoopy->getIdeaOfBrain();
+	// Dog superCan(*snoopy);
+	// snoopy->addIdeaToBrain("que pasa");
+	// superCan.getIdeaOfBrain();
+	// std::cout << std::endl;
+	// snoopy->getIdeaOfBrain();
+	// delete snoopy;
+
 
 return 0;
 

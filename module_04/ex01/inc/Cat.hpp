@@ -28,6 +28,8 @@ class Cat : public Animal
 		Cat&	operator=(const Cat& rhs); 		//Assignation operator
 
 		void	makeSound() const;
+		void	addIdeaToBrain(std::string idea);
+		void	getIdeaOfBrain() const;
 };
 
 #endif
