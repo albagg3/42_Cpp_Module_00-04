@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.hpp                                     :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/15 17:06:19 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/15 17:10:09 by codespace        ###   ########.fr       */
+/*   Created: 2023/10/15 17:29:06 by codespace         #+#    #+#             */
+/*   Updated: 2023/10/15 17:44:43 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICHARACTER_H
-# define ICHARACTER_H
+#ifndef ICE_H
+# define ICE_H
 
 #include "AMateria.hpp"
-class ICharacter{
+
+class Ice : public AMateria
+{
+
+    private:
+    
     public:
-        virtual ~ICharacter(){}
-        virtual std::string const & getName() const = 0;
-        virtual void equip(AMateria* m) = 0;
-        virtual void unequip(int idx) = 0;
-        virtual void use(int idx, ICharacter& target) = 0;
+        Ice();
+        Ice(const Ice& original);
+        ~Ice();
+
+        Ice&    operator=(const Ice& rhs);
 };
 
 #endif

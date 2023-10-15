@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:56:04 by albagarc          #+#    #+#             */
-/*   Updated: 2023/10/14 18:40:56 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/15 18:32:18 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,9 @@ void	Brain::setIdea(std::string idea)
 {
 	for (int i = 0; i < 100; i++)
 	{
-		if (_ideas[i].empty())
+		if (this->_ideas[i].empty())
 		{
-			_ideas[i] = idea;
+			this->_ideas[i] = idea;
 			break ;
 		}
 	}
@@ -62,9 +62,9 @@ void Brain::getIdeas()	const
 {
 	for (int i = 0; i < 100; i++)
 	{
-		if (!_ideas[i].empty())
+		if (!this->_ideas[i].empty())
 		{
-			std::cout << _ideas[i] << std::endl;
+			std::cout << this->_ideas[i] << std::endl;
 		}
 	}
 }

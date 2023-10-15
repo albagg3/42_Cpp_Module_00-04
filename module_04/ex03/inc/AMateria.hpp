@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 16:16:41 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/15 16:26:38 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/15 18:25:02 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 # define AMATERIA_H
 
 #include <iostream>
-
+#include "ICharacter.hpp"
 class AMateria
 {
     protected:
-    
+        std::string type;
     public:
         AMateria();                             //Constructor
         AMateria(const AMateria& original);     //Constructor copia
@@ -26,7 +26,7 @@ class AMateria
         // virtual ~AAnimal();
         ~AMateria();                            //Destructor
         
-        std::string const & getType() const;     //Returns the materia type;
+        const std::string& getType() const;     //Returns the materia type;
         virtual AMateria*   clone() const = 0;
         virtual void        use(ICharacter& target);
         
