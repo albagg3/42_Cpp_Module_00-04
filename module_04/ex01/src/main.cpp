@@ -18,7 +18,6 @@
 
 int main ()
 {
-
 	Dog*	snoopy = new Dog();
 	Dog*	rex = new Dog();
 	
@@ -67,6 +66,5 @@ int main ()
 	delete snoopy;
 	delete rex;
 
-return 0;
-
+	return 0;
 }

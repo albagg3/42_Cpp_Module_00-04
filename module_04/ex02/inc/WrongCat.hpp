@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/20 12:06:37 by albagarc          #+#    #+#             */
-/*   Updated: 2023/10/14 20:09:52 by albagarc         ###   ########.fr       */
+/*   Created: 2023/10/14 14:14:38 by albagarc          #+#    #+#             */
+/*   Updated: 2023/10/14 16:40:39 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
+#ifndef WRONG_CAT_H
+# define WRONG_CAT_H
+
 #include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
 
-int main ()
+class	WrongCat : public WrongAnimal
 {
+	private:
 
-	// Dog* snoopy = new Dog();
-	
-	// snoopy->addIdeaToBrain("hola");
-	// snoopy->getIdeaOfBrain();
-	// Dog superCan(*snoopy);
-	// snoopy->addIdeaToBrain("que pasa");
-	// superCan.getIdeaOfBrain();
-	// std::cout << std::endl;
-	// snoopy->getIdeaOfBrain();
-	// delete snoopy;
+	public:
+		WrongCat();
+		WrongCat(WrongCat& original);
+		~WrongCat();
 
+		WrongCat&	operator=(const WrongCat& rhs);
 
-return 0;
+		void	makeSound() const;
+};
 
-}
+#endif

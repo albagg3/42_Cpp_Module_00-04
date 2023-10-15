@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "Dog.hpp"
+
 
 //Constructor
 Dog::Dog() 
@@ -41,7 +43,6 @@ Dog&	Dog::operator=(const Dog& rhs)
 	std::cout << GREY << "Dog asignation operator was called" << RESET << std::endl;
 	if(this == &rhs)
 		return *this;
-	this->_brain_dog = new Brain(*rhs._brain_dog);
 	return *this;
 }
 
@@ -59,3 +60,5 @@ void	Dog::getIdeaOfBrain() const
 {
 	this->_brain_dog->getIdeas();
 }
+
+

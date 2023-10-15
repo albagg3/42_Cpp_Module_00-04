@@ -42,7 +42,6 @@ Cat&	Cat::operator=(const Cat& rhs)
 	if(this == &rhs)
 		return *this;
 	// this->type = original.type
-	this->_brain_cat = new Brain(*rhs._brain_cat);
 	return *this;
 }
 

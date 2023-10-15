@@ -1,6 +1,6 @@
 #-------------VARIABLES---------------------
 
-NAME		=	Repetitive_work
+NAME		=	I_dont_want_to_set_the_world_on_fire
 CC			=	c++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 OBJ_DIR		=	obj/
@@ -10,7 +10,7 @@ DEP_FLAGS	=	-MMD
 RM			=	rm -f
 	
 
-SRC_FILES 	=	main ClapTrap ScavTrap FragTrap
+SRC_FILES 	=	main Animal Dog Cat WrongAnimal WrongCat Brain
 OBJ			=	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 DEPS 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .d, $(SRC_FILES)))
 
