@@ -19,17 +19,53 @@
 int main ()
 {
 
-	// Dog* snoopy = new Dog();
+	Dog*	snoopy = new Dog();
+	Dog*	rex = new Dog();
 	
-	// snoopy->addIdeaToBrain("hola");
-	// snoopy->getIdeaOfBrain();
-	// Dog superCan(*snoopy);
-	// snoopy->addIdeaToBrain("que pasa");
-	// superCan.getIdeaOfBrain();
-	// std::cout << std::endl;
-	// snoopy->getIdeaOfBrain();
-	// delete snoopy;
+	std::cout << GREEN << "ADD IDEA TO SNOOPY'S BRAIN" << RESET << std::endl;
+	snoopy->addIdeaToBrain("hola");
 
+	std::cout << RED << "SNOOPY'S IDEAS: " << RESET << std::endl;
+	snoopy->getIdeaOfBrain();
+
+	std::cout << GREEN << "We create superCan with a copy constructor" << RESET << std::endl;
+	Dog superCan(*snoopy);
+
+	std::cout << GREEN << "ADD IDEA TO SNOOPY'S BRAIN" << RESET << std::endl;
+	snoopy->addIdeaToBrain("que pasa");
+
+	std::cout << GREEN << "ADD IDEA TO SNOOPY'S BRAIN" << RESET << std::endl;
+	snoopy->addIdeaToBrain("otra idea más");
+
+	std::cout << RED << "SNOOPY'S IDEAS: " << RESET << std::endl;
+	snoopy->getIdeaOfBrain();
+
+	std::cout << RED << "SUPERCAN'S IDEAS: " << RESET << std::endl;
+	superCan.getIdeaOfBrain();
+
+	std::cout << RED << "Assignation operator used to equal snoopy to rex " << RESET << std::endl;
+	*rex = *snoopy;
+
+	std::cout << RED << "REX'S IDEAS: " << RESET << std::endl;
+	rex->getIdeaOfBrain();
+
+	std::cout << RED << "SNOOPY'S IDEAS: " << RESET << std::endl;
+	snoopy->getIdeaOfBrain();
+
+	std::cout << GREEN << "ADD IDEAS TO SNOOPY'S BRAIN" << RESET << std::endl;
+	snoopy->addIdeaToBrain("Quiero un hueso de merienda");
+	snoopy->addIdeaToBrain("lalallala");
+
+	std::cout << RED << "REX'S IDEAS: " << RESET << std::endl;
+	rex->getIdeaOfBrain();
+
+	std::cout << RED << "SNOOPY'S IDEAS: " << RESET << std::endl;
+	snoopy->getIdeaOfBrain();
+
+	std::cout << RED << "SuperCan'S IDEAS: " << RESET << std::endl;
+	superCan.getIdeaOfBrain();
+	delete snoopy;
+	delete rex;
 
 return 0;
 
