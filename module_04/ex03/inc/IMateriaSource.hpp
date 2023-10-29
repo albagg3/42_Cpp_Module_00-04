@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 18:20:14 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/15 18:22:49 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/29 20:31:13 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class IMateriaSource
     public:
         virtual ~IMateriaSource(){}
         virtual void learnMateria(AMateria*) = 0;
-        virtual AMateria* createMAteria(std::string const & type) = 0;
+        virtual AMateria* createMateria(const std::string& type) = 0;
 };
 
 #endif

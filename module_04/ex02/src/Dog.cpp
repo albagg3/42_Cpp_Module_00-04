@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 18:26:50 by albagarc          #+#    #+#             */
-/*   Updated: 2023/10/14 20:09:09 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/29 20:37:30 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ Dog&	Dog::operator=(const Dog& rhs)
 	std::cout << GREY << "Dog asignation operator was called" << RESET << std::endl;
 	if(this == &rhs)
 		return *this;
+	delete this->_brain_dog;
 	this->_brain_dog = new Brain(*rhs._brain_dog);
 	return *this;
 }

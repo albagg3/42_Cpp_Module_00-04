@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 18:27:07 by albagarc          #+#    #+#             */
-/*   Updated: 2023/10/14 17:49:25 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/10/29 20:38:01 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Cat&	Cat::operator=(const Cat& rhs)
 	std::cout << GREY << "Cat asignation operator was called" << RESET << std::endl;
 	if(this == &rhs)
 		return *this;
-	// this->type = original.type
+	delete this->_brain_cat; 
 	this->_brain_cat = new Brain(*rhs._brain_cat);
 	return *this;
 }

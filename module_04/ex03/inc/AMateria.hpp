@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 16:16:41 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/15 18:25:02 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/29 19:54:14 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 
 #include <iostream>
 #include "ICharacter.hpp"
+
+#define RED "\e[91m"
+#define GREEN "\e[92m"
+#define YELLOW "\e[93m"
+#define GREY "\e[90m"
+#define RESET "\e[0m"
+#define BOLDBLUE "\033[216;1m"
+
 class AMateria
 {
     protected:
@@ -23,8 +31,7 @@ class AMateria
         AMateria();                             //Constructor
         AMateria(const AMateria& original);     //Constructor copia
         AMateria(std::string const & type);     //Constructor que define el type
-        // virtual ~AAnimal();
-        ~AMateria();                            //Destructor
+        virtual ~AMateria();                    //Destructor
         
         const std::string& getType() const;     //Returns the materia type;
         virtual AMateria*   clone() const = 0;
