@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 17:29:02 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/29 19:04:24 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/11/05 18:28:27 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Cure : public AMateria
 
         Cure&    operator=(const Cure& rhs);
 		Cure*	clone() const;
-		void        use(ICharacter& target)
+		void        use(ICharacter& target);
 };
 
 #endif

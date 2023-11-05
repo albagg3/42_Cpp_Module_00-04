@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 18:27:07 by albagarc          #+#    #+#             */
-/*   Updated: 2023/10/14 17:49:25 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/11/05 19:49:32 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ Cat&	Cat::operator=(const Cat& rhs)
 	if(this == &rhs)
 		return *this;
 	// this->type = original.type
+	delete this->_brain_cat;
 	this->_brain_cat = new Brain(*rhs._brain_cat);
 	return *this;
 }

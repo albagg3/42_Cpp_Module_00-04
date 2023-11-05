@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 17:27:12 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/29 20:12:10 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/11/05 18:33:20 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define CHARACTER_H
 
 #include "ICharacter.hpp"
+#include "AMateria.hpp"
+
 
 class Character : public ICharacter
 {

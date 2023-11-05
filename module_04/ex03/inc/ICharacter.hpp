@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 17:06:19 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/15 17:10:09 by codespace        ###   ########.fr       */
+/*   Updated: 2023/11/05 18:25:28 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ICHARACTER_H
 
 #include "AMateria.hpp"
+
 class ICharacter{
     public:
         virtual ~ICharacter(){}

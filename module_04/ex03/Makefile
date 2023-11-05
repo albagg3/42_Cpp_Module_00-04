@@ -2,7 +2,7 @@
 #-Wshadow : flag que te avisa si tienes variables con el mismo nombre aunque no se afecten unas a otras.
 #-Wno-shadow : flag que te quita los avisos de Wshadow.
 
-NAME		=	Now_its_weird!
+NAME		=	Materias
 CC			=	c++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 OBJ_DIR		=	obj/
@@ -12,7 +12,7 @@ DEP_FLAGS	=	-MMD
 RM			=	rm -f
 	
 
-SRC_FILES 	=	main ClapTrap ScavTrap FragTrap DiamondTrap
+SRC_FILES 	=	main AMateria Character Cure Ice ICharacter MateriaSource
 OBJ			=	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 DEPS 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .d, $(SRC_FILES)))
 

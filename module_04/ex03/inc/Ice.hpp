@@ -6,7 +6,7 @@
 /*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 17:29:06 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/29 19:57:34 by albagarc         ###   ########.fr       */
+/*   Updated: 2023/11/05 18:27:42 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Ice : public AMateria
 
         Ice&    operator=(const Ice& rhs);
 		Ice*	clone() const;
-		void	use(ICharacter& target)
+		void	use(ICharacter& target);
 };
 
 #endif

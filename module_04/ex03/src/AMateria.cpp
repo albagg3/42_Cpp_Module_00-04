@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: albagarc <albagarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 18:00:42 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/15 18:24:44 by codespace        ###   ########.fr       */
+/*   Updated: 2023/11/05 18:56:42 by albagarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,4 @@ AMateria::~AMateria()
 const std::string& AMateria::getType() const
 {
     return this->type;
-}
-
-void    AMateria::use(ICharacter& target)
-{
-    return;
 }
